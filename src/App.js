@@ -8,8 +8,7 @@ import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link,
+  Route 
 } from "react-router-dom";
 
 
@@ -59,8 +58,9 @@ function App() {
       <Routes>
         {/* /users --> Component 1
             /users/home --> Component 2 */}
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/" element={<Textform heading="Enter the text to analyze" themeMode={mode} showAlert={showAlert} />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route exact path="/" element={<Textform heading="Try TextUtils - Word Counter, Character Counter, Remove extra spaces, etc." mode={mode} showAlert={showAlert} />} />
+          {/* <Textform heading="Enter the text to analyze" mode={mode} showAlert={showAlert} /> */}
         </Routes>
       </div>
     </Router>
